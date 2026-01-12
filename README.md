@@ -11,6 +11,7 @@ Classic DOS educational game from The Learning Company (1991). Solve math proble
 - **Location:** [`operation-neptune/`](./operation-neptune/)
 - **Emulation:** js-dos (DOSBox in browser)
 - **Source:** [Archive.org](https://archive.org/details/msdos_Super_Solvers_Operation_Neptune_1990)
+- **Port:** 8080
 
 **Quick Start:**
 ```bash
@@ -18,6 +19,25 @@ cd operation-neptune
 ./scripts/download-game.sh
 docker-compose up -d
 # Access at http://localhost:8080
+```
+
+---
+
+### Gizmos & Gadgets
+
+Classic DOS educational game from The Learning Company (1993). Build vehicles and race against Morty Maxwell by solving science puzzles about machines, magnets, and electronics.
+
+- **Location:** [`gizmos-gadgets/`](./gizmos-gadgets/)
+- **Emulation:** js-dos (DOSBox in browser)
+- **Source:** [Archive.org](https://archive.org/details/gizmos__gadgets)
+- **Port:** 8081
+
+**Quick Start:**
+```bash
+cd gizmos-gadgets
+./scripts/download-game.sh
+docker-compose up -d
+# Access at http://localhost:8081
 ```
 
 ## Deployment Options
