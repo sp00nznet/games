@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  epic-pinball:
+    build: .
+    container_name: epic-pinball
+    ports:
+      - "8083:80"
+    volumes:
+      - ./game:/usr/share/nginx/html/game:ro
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 5s

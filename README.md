@@ -40,6 +40,63 @@ docker-compose up -d
 # Access at http://localhost:8081
 ```
 
+---
+
+### Jazz Jackrabbit: Holiday Hare 1995
+
+Holiday-themed platformer from Epic MegaGames (1995). Designed by Cliff Bleszinski, race through festive levels on planet Candion with your blaster!
+
+- **Location:** [`jazz-jackrabbit/`](./jazz-jackrabbit/)
+- **Emulation:** js-dos (DOSBox in browser)
+- **Source:** [Archive.org](https://archive.org/details/msdos_Jazz_Jackrabbit_-_Holiday_Hare_1995_1995)
+- **Port:** 8082
+
+**Quick Start:**
+```bash
+cd jazz-jackrabbit
+./scripts/download-game.sh
+docker-compose up -d
+# Access at http://localhost:8082
+```
+
+---
+
+### Epic Pinball
+
+Classic pinball simulation from Digital Extremes (1993). Third best-selling shareware game ever - revenue helped fund Unreal Engine development!
+
+- **Location:** [`epic-pinball/`](./epic-pinball/)
+- **Emulation:** js-dos (DOSBox in browser)
+- **Source:** [Archive.org](https://archive.org/details/epicpin_202406)
+- **Port:** 8083
+
+**Quick Start:**
+```bash
+cd epic-pinball
+./scripts/download-game.sh
+docker-compose up -d
+# Access at http://localhost:8083
+```
+
+---
+
+### Carmageddon Max Pack
+
+Vehicular combat racing from Stainless Games (1998). PC Zone's "Game of the Year" 1997. Includes original game + Splat Pack expansion. **Mature content (18+).**
+
+- **Location:** [`carmageddon/`](./carmageddon/)
+- **Emulation:** js-dos (DOSBox in browser)
+- **Source:** [Archive.org](https://archive.org/details/msdos_Carmageddon_Max_Pack_1998)
+- **Port:** 8084
+
+**Quick Start:**
+```bash
+cd carmageddon
+./scripts/download-game.sh
+docker-compose up -d
+# Access at http://localhost:8084
+```
+
 ## Deployment Options
 
 ### Docker

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carmageddon Max Pack - Self-Hosted DOS Game</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: #1a1a1a;
+            color: #eee;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #2a0a0a 0%, #4a1010 100%);
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            color: #ff0000;
+            text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+        .subtitle { color: #aaa; font-size: 0.9em; }
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            width: 100%;
+            max-width: 1000px;
+        }
+        #dos-container {
+            width: 100%;
+            max-width: 800px;
+            aspect-ratio: 4/3;
+            background-color: #000;
+            border: 3px solid #4a1010;
+            border-radius: 8px;
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        #dos { width: 100%; height: 100%; }
+        .controls {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        button {
+            background: linear-gradient(135deg, #4a1010 0%, #2a0a0a 100%);
+            color: #ff0000;
+            border: 2px solid #ff0000;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        button:hover {
+            background: #ff0000;
+            color: #1a1a1a;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+        }
+        .instructions {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #2a0a0a;
+            border-radius: 8px;
+            max-width: 800px;
+            width: 100%;
+        }
+        .instructions h2 { color: #ff0000; margin-bottom: 15px; }
+        .instructions ul { list-style-position: inside; line-height: 1.8; }
+        .warning {
+            background-color: #4a1010;
+            border: 1px solid #ff0000;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 15px;
+            font-size: 0.9em;
+        }
+        .loading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: #ff0000;
+        }
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid #2a0a0a;
+            border-top-color: #ff0000;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #2a0a0a;
+            width: 100%;
+            color: #666;
+            font-size: 0.8em;
+        }
+        footer a { color: #ff0000; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CARMAGEDDON MAX PACK</h1>
+        <p class="subtitle">Stainless Games (1998) - Vehicular Combat Racing</p>
+    </header>
+    <main>
+        <div id="dos-container">
+            <div id="dos">
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>Loading emulator...</p>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <button onclick="toggleFullscreen()">Fullscreen</button>
+            <button onclick="restartGame()">Restart</button>
+        </div>
+        <div class="instructions">
+            <h2>Controls</h2>
+            <ul>
+                <li><strong>Arrow Keys</strong> - Accelerate / Brake / Steer</li>
+                <li><strong>Space</strong> - Handbrake</li>
+                <li><strong>Enter</strong> - Recover vehicle</li>
+                <li><strong>Tab</strong> - Rear view</li>
+                <li><strong>Insert</strong> - Horn</li>
+                <li><strong>Esc</strong> - Menu / Pause</li>
+            </ul>
+            <h2 style="margin-top: 20px;">About</h2>
+            <p style="line-height: 1.6; margin-top: 10px;">
+                The original freeform driving sensation! Win races by completing laps,
+                wrecking all opponents, or... other methods. Features anarchic sandbox
+                gameplay and over-the-top action. Winner of PC Zone's "Game of the Year" 1997.
+                Includes the original game plus the Splat Pack expansion.
+            </p>
+            <div class="warning">
+                <strong>Note:</strong> This game contains mature content and was rated 18+
+                upon release. Player discretion advised.
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Powered by <a href="https://js-dos.com/" target="_blank">js-dos</a> |
+        Game from <a href="https://archive.org/details/msdos_Carmageddon_Max_Pack_1998" target="_blank">Internet Archive</a></p>
+    </footer>
+    <script src="https://js-dos.com/v7/build/releases/latest/js-dos/js-dos.js"></script>
+    <link rel="stylesheet" href="https://js-dos.com/v7/build/releases/latest/js-dos/js-dos.css">
+    <script>
+        let ci = null;
+        Dos(document.getElementById("dos"), {
+            url: "game/carmageddon.jsdos",
+            autoStart: true,
+        }).then((instance) => {
+            ci = instance;
+        }).catch((error) => {
+            document.getElementById("dos").innerHTML = '<div class="loading"><p style="color: #ff6b6b;">Failed to load game.</p><p style="margin-top: 10px; font-size: 0.9em;">Make sure carmageddon.jsdos exists in the game/ folder.</p></div>';
+        });
+        function toggleFullscreen() {
+            const container = document.getElementById("dos-container");
+            if (!document.fullscreenElement) {
+                container.requestFullscreen().catch(err => console.error(err));
+            } else {
+                document.exitFullscreen();
+            }
+        }
+        function restartGame() { location.reload(); }
+    </script>
+</body>
+</html>
