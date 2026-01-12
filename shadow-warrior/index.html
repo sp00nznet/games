@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow Warrior - Self-Hosted DOS Game</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}body{background:#0a0a0a;color:#eee;font-family:sans-serif;min-height:100vh;display:flex;flex-direction:column;align-items:center}header{padding:20px;background:linear-gradient(135deg,#8b0000,#b22222);width:100%;text-align:center}h1{color:#ffd700;text-shadow:0 0 10px rgba(255,215,0,.7),2px 2px 4px rgba(0,0,0,.8)}main{flex:1;padding:20px;width:100%;max-width:900px;display:flex;flex-direction:column;align-items:center}#dos-container{width:100%;max-width:800px;aspect-ratio:4/3;background:#000;border:3px solid #8b0000;border-radius:8px;box-shadow:0 0 20px rgba(139,0,0,.5)}#dos{width:100%;height:100%}.controls{margin-top:20px}button{background:#8b0000;color:#ffd700;border:2px solid #ffd700;padding:10px 20px;border-radius:5px;cursor:pointer;margin:5px;text-transform:uppercase;font-weight:bold}button:hover{background:#ffd700;color:#8b0000}.loading{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;color:#ffd700}.instructions{margin-top:30px;padding:20px;background:#1a0a0a;border:1px solid #8b0000;border-radius:8px;max-width:800px;width:100%}.instructions h2{color:#ffd700;margin-bottom:15px}.instructions ul{list-style-position:inside;line-height:1.8}.warning{background:#2a0a0a;border:1px solid #8b0000;padding:10px;border-radius:5px;margin-top:15px}footer{padding:15px;background:#1a0a0a;width:100%;text-align:center;color:#666;font-size:.8em}footer a{color:#ffd700}
+    </style>
+</head>
+<body>
+    <header><h1>SHADOW WARRIOR</h1><p style="color:#ddd">3D Realms (1997) - Build Engine FPS</p></header>
+    <main>
+        <div id="dos-container"><div id="dos"><div class="loading"><p>Loading...</p></div></div></div>
+        <div class="controls"><button onclick="document.getElementById('dos-container').requestFullscreen()">Fullscreen</button><button onclick="location.reload()">Restart</button></div>
+        <div class="instructions">
+            <h2>Controls</h2>
+            <ul>
+                <li><strong>Arrow Keys / WASD</strong> - Move</li>
+                <li><strong>Ctrl</strong> - Fire</li>
+                <li><strong>Space</strong> - Use / Open</li>
+                <li><strong>Shift</strong> - Run</li>
+                <li><strong>1-0</strong> - Select weapon</li>
+                <li><strong>Enter</strong> - Kick</li>
+                <li><strong>Esc</strong> - Menu</li>
+            </ul>
+            <p style="margin-top:15px;color:#aaa">Play as Lo Wang, a ninja warrior fighting through hordes of demons! From the creators of Duke Nukem 3D.</p>
+            <div class="warning"><strong>Note:</strong> Mature content (17+). Player discretion advised.</div>
+        </div>
+    </main>
+    <footer><p>Powered by <a href="https://js-dos.com/">js-dos</a> | Game from <a href="https://archive.org/details/msdos_Shadow_Warrior_1997">Internet Archive</a></p></footer>
+    <script src="https://js-dos.com/v7/build/releases/latest/js-dos/js-dos.js"></script>
+    <link rel="stylesheet" href="https://js-dos.com/v7/build/releases/latest/js-dos/js-dos.css">
+    <script>Dos(document.getElementById("dos"),{url:"game/sw.jsdos",autoStart:true}).catch(()=>{document.getElementById("dos").innerHTML="<div class='loading'><p style='color:#f66'>Game not found. Add sw.jsdos to game/ folder.</p></div>"});</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M.A.X. - Self-Hosted DOS Game</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}body{background:#0a1a2a;color:#eee;font-family:sans-serif;min-height:100vh;display:flex;flex-direction:column;align-items:center}header{padding:20px;background:linear-gradient(135deg,#1a3a5a,#2a5a7a);width:100%;text-align:center}h1{color:#00ff88;text-shadow:0 0 10px rgba(0,255,136,.5)}main{flex:1;padding:20px;width:100%;max-width:900px;display:flex;flex-direction:column;align-items:center}#dos-container{width:100%;max-width:800px;aspect-ratio:4/3;background:#000;border:3px solid #00ff88;border-radius:8px;box-shadow:0 0 20px rgba(0,255,136,.2)}#dos{width:100%;height:100%}.controls{margin-top:20px}button{background:#1a3a5a;color:#00ff88;border:2px solid #00ff88;padding:10px 20px;border-radius:5px;cursor:pointer;margin:5px}button:hover{background:#00ff88;color:#0a1a2a}.loading{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;color:#00ff88}.instructions{margin-top:30px;padding:20px;background:#1a3a5a;border-radius:8px;max-width:800px;width:100%}.instructions h2{color:#00ff88;margin-bottom:15px}.instructions ul{list-style-position:inside;line-height:1.8}footer{padding:15px;background:#1a3a5a;width:100%;text-align:center;color:#666;font-size:.8em}footer a{color:#00ff88}
+    </style>
+</head>
+<body>
+    <header><h1>M.A.X.: Mechanized Assault & Exploration</h1><p style="color:#aaa">Interplay (1996) - Turn-Based Strategy</p></header>
+    <main>
+        <div id="dos-container"><div id="dos"><div class="loading"><p>Loading...</p></div></div></div>
+        <div class="controls"><button onclick="document.getElementById('dos-container').requestFullscreen()">Fullscreen</button><button onclick="location.reload()">Restart</button></div>
+        <div class="instructions">
+            <h2>Controls</h2>
+            <ul>
+                <li><strong>Mouse</strong> - Select units, issue commands</li>
+                <li><strong>Left Click</strong> - Select / Move</li>
+                <li><strong>Right Click</strong> - Context menu</li>
+                <li><strong>Arrow Keys</strong> - Scroll map</li>
+                <li><strong>Space</strong> - End turn</li>
+                <li><strong>Esc</strong> - Menu</li>
+            </ul>
+            <p style="margin-top:15px;color:#aaa">Colonize alien worlds with mech armies! A deep turn-based strategy game where you build bases, harvest resources, and wage war.</p>
+        </div>
+    </main>
+    <footer><p>Powered by <a href="https://js-dos.com/">js-dos</a> | Game from <a href="https://archive.org/details/msdos_MAX_-_Mechanzied_Assault_and_Exploration_1996">Internet Archive</a></p></footer>
+    <script src="https://js-dos.com/v7/build/releases/latest/js-dos/js-dos.js"></script>
+    <link rel="stylesheet" href="https://js-dos.com/v7/build/releases/latest/js-dos/js-dos.css">
+    <script>Dos(document.getElementById("dos"),{url:"game/max.jsdos",autoStart:true}).catch(()=>{document.getElementById("dos").innerHTML="<div class='loading'><p style='color:#f66'>Game not found. Add max.jsdos to game/ folder.</p></div>"});</script>
+</body>
+</html>

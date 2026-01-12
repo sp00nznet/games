@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Pool - Self-Hosted DOS Game</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}body{background:#0a3a0a;color:#eee;font-family:sans-serif;min-height:100vh;display:flex;flex-direction:column;align-items:center}header{padding:20px;background:linear-gradient(135deg,#1a5a1a,#2a7a2a);width:100%;text-align:center}h1{color:#ffcc00;text-shadow:2px 2px 4px rgba(0,0,0,.5)}main{flex:1;padding:20px;width:100%;max-width:900px;display:flex;flex-direction:column;align-items:center}#dos-container{width:100%;max-width:800px;aspect-ratio:4/3;background:#000;border:4px solid #8b4513;border-radius:8px}#dos{width:100%;height:100%}.controls{margin-top:20px}button{background:#1a5a1a;color:#ffcc00;border:2px solid #ffcc00;padding:10px 20px;border-radius:5px;cursor:pointer;margin:5px}button:hover{background:#ffcc00;color:#1a5a1a}.loading{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;color:#ffcc00}.instructions{margin-top:30px;padding:20px;background:#1a5a1a;border-radius:8px;max-width:800px;width:100%}.instructions h2{color:#ffcc00;margin-bottom:15px}.instructions ul{list-style-position:inside;line-height:1.8}footer{padding:15px;background:#1a5a1a;width:100%;text-align:center;color:#aaa;font-size:.8em}footer a{color:#ffcc00}
+    </style>
+</head>
+<body>
+    <header><h1>Virtual Pool</h1><p style="color:#ddd">Interplay / Celeris (1995) - Billiards Simulation</p></header>
+    <main>
+        <div id="dos-container"><div id="dos"><div class="loading"><p>Loading...</p></div></div></div>
+        <div class="controls"><button onclick="document.getElementById('dos-container').requestFullscreen()">Fullscreen</button><button onclick="location.reload()">Restart</button></div>
+        <div class="instructions">
+            <h2>Controls</h2>
+            <ul>
+                <li><strong>Mouse</strong> - Aim cue stick</li>
+                <li><strong>Left Click</strong> - Shoot (hold and release)</li>
+                <li><strong>Right Click</strong> - Change camera angle</li>
+                <li><strong>Arrow Keys</strong> - Fine-tune aim</li>
+                <li><strong>+/-</strong> - Adjust power</li>
+                <li><strong>Esc</strong> - Menu</li>
+            </ul>
+            <p style="margin-top:15px;color:#aaa">The most realistic pool simulation of its era! Features 8-ball, 9-ball, straight pool, and more with accurate physics.</p>
+        </div>
+    </main>
+    <footer><p>Powered by <a href="https://js-dos.com/">js-dos</a> | Game from <a href="https://archive.org/details/msdos_Virtual_Pool_1995">Internet Archive</a></p></footer>
+    <script src="https://js-dos.com/v7/build/releases/latest/js-dos/js-dos.js"></script>
+    <link rel="stylesheet" href="https://js-dos.com/v7/build/releases/latest/js-dos/js-dos.css">
+    <script>Dos(document.getElementById("dos"),{url:"game/vpool.jsdos",autoStart:true}).catch(()=>{document.getElementById("dos").innerHTML="<div class='loading'><p style='color:#f66'>Game not found. Add vpool.jsdos to game/ folder.</p></div>"});</script>
+</body>
+</html>

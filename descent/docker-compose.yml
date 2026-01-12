@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  descent:
+    build: .
+    container_name: descent
+    ports:
+      - "8109:80"
+    volumes:
+      - ./game:/usr/share/nginx/html/game:ro
+    restart: unless-stopped

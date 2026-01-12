@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descent - Self-Hosted DOS Game</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}body{background:#0a0a1a;color:#eee;font-family:sans-serif;min-height:100vh;display:flex;flex-direction:column;align-items:center}header{padding:20px;background:linear-gradient(135deg,#2a0a1a,#4a1a2a);width:100%;text-align:center}h1{color:#ff3366;text-shadow:0 0 10px rgba(255,51,102,.7)}main{flex:1;padding:20px;width:100%;max-width:900px;display:flex;flex-direction:column;align-items:center}#dos-container{width:100%;max-width:800px;aspect-ratio:4/3;background:#000;border:3px solid #ff3366;border-radius:8px;box-shadow:0 0 20px rgba(255,51,102,.3)}#dos{width:100%;height:100%}.controls{margin-top:20px}button{background:#2a0a1a;color:#ff3366;border:2px solid #ff3366;padding:10px 20px;border-radius:5px;cursor:pointer;margin:5px}button:hover{background:#ff3366;color:#0a0a1a}.loading{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;color:#ff3366}.instructions{margin-top:30px;padding:20px;background:#2a0a1a;border-radius:8px;max-width:800px;width:100%}.instructions h2{color:#ff3366;margin-bottom:15px}.instructions ul{list-style-position:inside;line-height:1.8}footer{padding:15px;background:#2a0a1a;width:100%;text-align:center;color:#666;font-size:.8em}footer a{color:#ff3366}
+    </style>
+</head>
+<body>
+    <header><h1>DESCENT</h1><p style="color:#aaa">Parallax Software / Interplay (1995)</p></header>
+    <main>
+        <div id="dos-container"><div id="dos"><div class="loading"><p>Loading...</p></div></div></div>
+        <div class="controls"><button onclick="document.getElementById('dos-container').requestFullscreen()">Fullscreen</button><button onclick="location.reload()">Restart</button></div>
+        <div class="instructions">
+            <h2>Controls</h2>
+            <ul>
+                <li><strong>Arrow Keys</strong> - Pitch and turn</li>
+                <li><strong>A/Z</strong> - Move forward/backward</li>
+                <li><strong>Q/E</strong> - Bank left/right</li>
+                <li><strong>Ctrl</strong> - Fire primary weapon</li>
+                <li><strong>Space</strong> - Fire secondary weapon</li>
+                <li><strong>Tab</strong> - Automap</li>
+                <li><strong>Esc</strong> - Menu</li>
+            </ul>
+            <p style="margin-top:15px;color:#aaa">The revolutionary 6-degrees-of-freedom shooter! Pilot your Pyro-GX through labyrinthine mines and destroy rogue robots.</p>
+        </div>
+    </main>
+    <footer><p>Powered by <a href="https://js-dos.com/">js-dos</a> | Game from <a href="https://archive.org/details/descent-cd">Internet Archive</a></p></footer>
+    <script src="https://js-dos.com/v7/build/releases/latest/js-dos/js-dos.js"></script>
+    <link rel="stylesheet" href="https://js-dos.com/v7/build/releases/latest/js-dos/js-dos.css">
+    <script>Dos(document.getElementById("dos"),{url:"game/descent.jsdos",autoStart:true}).catch(()=>{document.getElementById("dos").innerHTML="<div class='loading'><p style='color:#f66'>Game not found. Add descent.jsdos to game/ folder.</p></div>"});</script>
+</body>
+</html>
