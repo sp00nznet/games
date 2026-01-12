@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  max-mechanized-assault:
+    build: .
+    container_name: max-mechanized-assault
+    ports:
+      - "8111:80"
+    volumes:
+      - ./game:/usr/share/nginx/html/game:ro
+    restart: unless-stopped

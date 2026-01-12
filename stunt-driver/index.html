@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stunt Driver - Self-Hosted DOS Game</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}body{background:#1a1a2e;color:#eee;font-family:sans-serif;min-height:100vh;display:flex;flex-direction:column;align-items:center}header{padding:20px;background:linear-gradient(135deg,#ff6600,#ff9933);width:100%;text-align:center}h1{color:#fff;text-shadow:2px 2px 4px rgba(0,0,0,.5)}main{flex:1;padding:20px;width:100%;max-width:900px;display:flex;flex-direction:column;align-items:center}#dos-container{width:100%;max-width:800px;aspect-ratio:4/3;background:#000;border:3px solid #ff6600;border-radius:8px}#dos{width:100%;height:100%}.controls{margin-top:20px}button{background:#ff6600;color:#fff;border:none;padding:10px 20px;border-radius:5px;cursor:pointer;margin:5px;font-weight:bold}button:hover{background:#ff9933}.loading{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;color:#ff6600}.instructions{margin-top:30px;padding:20px;background:#2a2a4e;border-radius:8px;max-width:800px;width:100%}.instructions h2{color:#ff6600;margin-bottom:15px}.instructions ul{list-style-position:inside;line-height:1.8}footer{padding:15px;background:#2a2a4e;width:100%;text-align:center;color:#666;font-size:.8em}footer a{color:#ff6600}
+    </style>
+</head>
+<body>
+    <header><h1>Stunt Driver</h1><p style="color:#fff">Spectrum HoloByte (1990) - Stunt Racing</p></header>
+    <main>
+        <div id="dos-container"><div id="dos"><div class="loading"><p>Loading...</p></div></div></div>
+        <div class="controls"><button onclick="document.getElementById('dos-container').requestFullscreen()">Fullscreen</button><button onclick="location.reload()">Restart</button></div>
+        <div class="instructions">
+            <h2>Controls</h2>
+            <ul>
+                <li><strong>Arrow Keys</strong> - Steer / Accelerate / Brake</li>
+                <li><strong>Space</strong> - Handbrake</li>
+                <li><strong>C</strong> - Change camera view</li>
+                <li><strong>R</strong> - Reset car position</li>
+                <li><strong>Esc</strong> - Menu</li>
+            </ul>
+            <p style="margin-top:15px;color:#aaa">Perform death-defying stunts across movie-set obstacle courses! One of the earliest 3D driving games with polygon graphics.</p>
+        </div>
+    </main>
+    <footer><p>Powered by <a href="https://js-dos.com/">js-dos</a> | Game from <a href="https://archive.org/details/msdos_Stunt_Driver_1990">Internet Archive</a></p></footer>
+    <script src="https://js-dos.com/v7/build/releases/latest/js-dos/js-dos.js"></script>
+    <link rel="stylesheet" href="https://js-dos.com/v7/build/releases/latest/js-dos/js-dos.css">
+    <script>Dos(document.getElementById("dos"),{url:"game/stunt.jsdos",autoStart:true}).catch(()=>{document.getElementById("dos").innerHTML="<div class='loading'><p style='color:#f66'>Game not found. Add stunt.jsdos to game/ folder.</p></div>"});</script>
+</body>
+</html>

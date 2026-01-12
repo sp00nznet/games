@@ -1,8 +1,8 @@
 # 🎮 Self-Hosted Retro Games
 
-> **Play classic DOS games directly in your browser!** A curated collection of 27 containerized retro games using js-dos emulation. Deploy instantly via Docker or Proxmox LXC.
+> **Play classic DOS games directly in your browser!** A curated collection of 33 containerized retro games using js-dos emulation. Deploy instantly via Docker or Proxmox LXC.
 
-[![Games](https://img.shields.io/badge/Games-27-brightgreen)]()
+[![Games](https://img.shields.io/badge/Games-33-brightgreen)]()
 [![Docker](https://img.shields.io/badge/Docker-Ready-blue)]()
 [![Proxmox](https://img.shields.io/badge/Proxmox-LXC-orange)]()
 [![js-dos](https://img.shields.io/badge/Emulator-js--dos-purple)]()
@@ -78,6 +78,7 @@ docker-compose up -d
 | <img src="https://archive.org/services/img/msdos_Whiplash_1995" width="100"> | **[Whiplash](./whiplash/)**<br>Gremlin Interactive | 1995 | Futuristic racing with weapons | `8099` |
 | <img src="https://archive.org/services/img/POD20_201808" width="100"> | **[P.O.D.: Planet of Death](./pod/)**<br>Ubisoft | 1997 | Race to escape a dying planet! Bundled with Pentium MMX | `8102` |
 | <img src="https://archive.org/services/img/hover_20240305" width="100"> | **[Hover!](./hover/)**<br>Microsoft | 1995 | Classic Windows 95 hovercraft maze game | `8097` |
+| <img src="https://archive.org/services/img/msdos_Stunt_Driver_1990" width="100"> | **[Stunt Driver](./stunt-driver/)**<br>Spectrum HoloByte | 1990 | Early 3D stunt driving with loops and jumps | `8107` |
 
 ---
 
@@ -88,6 +89,7 @@ docker-compose up -d
 | <img src="https://archive.org/services/img/msdos_Jagged_Alliance_1994" width="100"> | **[Jagged Alliance](./jagged-alliance/)**<br>Sir-tech | 1994 | Hire mercenaries, liberate Metavira - cult classic! | `8086` |
 | <img src="https://archive.org/services/img/msdos_Syndicate_Plus_1994" width="100"> | **[Syndicate Plus](./syndicate-plus/)**<br>Bullfrog | 1994 | Cyberpunk tactical action + American Revolt expansion | `8087` |
 | <img src="https://archive.org/services/img/mechwarrior_1989" width="100"> | **[MechWarrior](./mechwarrior/)**<br>Dynamix / Activision | 1989 | Pilot BattleMechs in the 31st century | `8105` |
+| <img src="https://archive.org/services/img/msdos_MAX_-_Mechanzied_Assault_and_Exploration_1996" width="100"> | **[M.A.X.](./max-mechanized-assault/)**<br>Interplay | 1996 | Mechanized Assault & Exploration - turn-based strategy | `8111` |
 
 ---
 
@@ -98,6 +100,9 @@ docker-compose up -d
 | <img src="https://archive.org/services/img/msdos_Redneck_Rampage_1997" width="100"> | **[Redneck Rampage](./redneck-rampage/)**<br>Xatrix / Interplay | 1997 | Build Engine FPS - aliens meet Arkansas! ⚠️ 17+ | `8091` |
 | <img src="https://archive.org/services/img/msdos_Redneck_Rampage_Rides_Again_1998" width="100"> | **[Redneck Rampage Rides Again](./redneck-rampage-rides-again/)**<br>Xatrix / Interplay | 1998 | More redneck mayhem! ⚠️ 17+ | `8088` |
 | <img src="https://archive.org/services/img/nam_20210413" width="100"> | **[NAM](./nam/)**<br>TNT Team / GT Interactive | 1998 | Build Engine Vietnam warfare | `8092` |
+| <img src="https://archive.org/services/img/msdos_Shadow_Warrior_1997" width="100"> | **[Shadow Warrior](./shadow-warrior/)**<br>3D Realms | 1997 | Build Engine ninja action - "Lo Wang" cult classic | `8112` |
+| <img src="https://archive.org/services/img/descent-cd" width="100"> | **[Descent](./descent/)**<br>Parallax / Interplay | 1995 | 6DOF shooter - navigate mines and destroy robots | `8109` |
+| <img src="https://archive.org/services/img/msdos_Descent_II_Vertigo_Series_1996" width="100"> | **[Descent II](./descent-2/)**<br>Parallax / Interplay | 1996 | Enhanced 6DOF action with guide bot & thief bot | `8108` |
 
 ---
 
@@ -117,6 +122,7 @@ docker-compose up -d
 | <img src="https://archive.org/services/img/epicpin_202406" width="100"> | **[Epic Pinball](./epic-pinball/)**<br>Digital Extremes | 1993 | 3rd best-selling shareware ever! Funded Unreal Engine | `8083` |
 | <img src="https://archive.org/services/img/the_even_more_incredible_machine_1993" width="100"> | **[The Incredible Machine](./incredible-machine/)**<br>Sierra / Dynamix | 1993 | Rube Goldberg puzzle perfection | `8100` |
 | <img src="https://archive.org/services/img/catz_april1998" width="100"> | **[Catz](./catz/)**<br>PF Magic | 1998 | Adopt and raise virtual kittens | `8106` |
+| <img src="https://archive.org/services/img/msdos_Virtual_Pool_1995" width="100"> | **[Virtual Pool](./virtual-pool/)**<br>Interplay / Celeris | 1995 | Realistic billiards simulation | `8110` |
 
 ---
 
@@ -155,20 +161,23 @@ done
 
 | Port | Game | Port | Game |
 |:----:|------|:----:|------|
-| `8080` | Operation Neptune | `8094` | Jazz Jackrabbit |
-| `8081` | Gizmos & Gadgets | `8095` | Storybook Weaver |
-| `8082` | Jazz: Holiday Hare | `8096` | One Must Fall 2097 |
-| `8083` | Epic Pinball | `8097` | Hover! |
-| `8084` | Carmageddon | `8098` | Midnight Rescue! |
-| `8085` | Destruction Derby 2 | `8099` | Whiplash |
-| `8086` | Jagged Alliance | `8100` | Incredible Machine |
-| `8087` | Syndicate Plus | `8101` | Mario Teaches Typing |
-| `8088` | Redneck Rampage 2 | `8102` | P.O.D. |
-| `8089` | Interstate '76 | `8103` | Oddworld |
-| `8090` | Busytown | `8104` | Weird Dreams |
-| `8091` | Redneck Rampage | `8105` | MechWarrior |
-| `8092` | NAM | `8106` | Catz |
-| `8093` | Treasure MathStorm | | |
+| `8080` | Operation Neptune | `8097` | Hover! |
+| `8081` | Gizmos & Gadgets | `8098` | Midnight Rescue! |
+| `8082` | Jazz: Holiday Hare | `8099` | Whiplash |
+| `8083` | Epic Pinball | `8100` | Incredible Machine |
+| `8084` | Carmageddon | `8101` | Mario Teaches Typing |
+| `8085` | Destruction Derby 2 | `8102` | P.O.D. |
+| `8086` | Jagged Alliance | `8103` | Oddworld |
+| `8087` | Syndicate Plus | `8104` | Weird Dreams |
+| `8088` | Redneck Rampage 2 | `8105` | MechWarrior |
+| `8089` | Interstate '76 | `8106` | Catz |
+| `8090` | Busytown | `8107` | Stunt Driver |
+| `8091` | Redneck Rampage | `8108` | Descent II |
+| `8092` | NAM | `8109` | Descent |
+| `8093` | Treasure MathStorm | `8110` | Virtual Pool |
+| `8094` | Jazz Jackrabbit | `8111` | M.A.X. |
+| `8095` | Storybook Weaver | `8112` | Shadow Warrior |
+| `8096` | One Must Fall 2097 | | |
 
 ---
 
