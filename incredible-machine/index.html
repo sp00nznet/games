@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Even More Incredible Machine - Self-Hosted DOS Game</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}body{background:#f5f5dc;color:#333;font-family:sans-serif;min-height:100vh;display:flex;flex-direction:column;align-items:center}header{padding:20px;background:linear-gradient(135deg,#4a7c59,#6b8e23);width:100%;text-align:center}h1{color:#fff;text-shadow:2px 2px 4px rgba(0,0,0,.3)}main{flex:1;padding:20px;width:100%;max-width:900px;display:flex;flex-direction:column;align-items:center}#dos-container{width:100%;max-width:800px;aspect-ratio:4/3;background:#000;border:4px solid #4a7c59;border-radius:8px}#dos{width:100%;height:100%}.controls{margin-top:20px}button{background:#4a7c59;color:#fff;border:none;padding:12px 24px;border-radius:25px;cursor:pointer;margin:5px;font-weight:bold}button:hover{background:#6b8e23}.loading{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;color:#4a7c59}.instructions{margin-top:30px;padding:20px;background:#fff;border:3px solid #4a7c59;border-radius:8px;max-width:800px;width:100%}.instructions h2{color:#4a7c59;margin-bottom:15px}.instructions ul{list-style-position:inside;line-height:1.8}footer{padding:15px;background:#4a7c59;width:100%;text-align:center;color:#fff;font-size:.8em}footer a{color:#fff}
+    </style>
+</head>
+<body>
+    <header><h1>The Even More Incredible Machine</h1><p style="color:#ddd">Sierra / Dynamix (1993) - Puzzle</p></header>
+    <main>
+        <div id="dos-container"><div id="dos"><div class="loading"><p>Loading...</p></div></div></div>
+        <div class="controls"><button onclick="document.getElementById('dos-container').requestFullscreen()">Fullscreen</button><button onclick="location.reload()">Restart</button></div>
+        <div class="instructions">
+            <h2>Controls</h2>
+            <ul>
+                <li><strong>Mouse</strong> - Drag and drop parts</li>
+                <li><strong>Click</strong> - Select and place objects</li>
+                <li><strong>Space</strong> - Start/Stop machine</li>
+                <li><strong>R</strong> - Reset puzzle</li>
+                <li><strong>Esc</strong> - Menu</li>
+            </ul>
+            <p style="margin-top:15px;color:#666">The ultimate Rube Goldberg puzzle game! Use gears, pulleys, cats, and more to create chain-reaction machines.</p>
+        </div>
+    </main>
+    <footer><p>Powered by <a href="https://js-dos.com/">js-dos</a> | Game from <a href="https://archive.org/details/the_even_more_incredible_machine_1993">Internet Archive</a></p></footer>
+    <script src="https://js-dos.com/v7/build/releases/latest/js-dos/js-dos.js"></script>
+    <link rel="stylesheet" href="https://js-dos.com/v7/build/releases/latest/js-dos/js-dos.css">
+    <script>Dos(document.getElementById("dos"),{url:"game/tim.jsdos",autoStart:true}).catch(()=>{document.getElementById("dos").innerHTML="<div class='loading'><p style='color:#f66'>Game not found. Add tim.jsdos to game/ folder.</p></div>"});</script>
+</body>
+</html>

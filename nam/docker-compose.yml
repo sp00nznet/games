@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  nam:
+    build: .
+    container_name: nam
+    ports:
+      - "8092:80"
+    volumes:
+      - ./game:/usr/share/nginx/html/game:ro
+    restart: unless-stopped

@@ -1,0 +1,11 @@
+# Game files (must be downloaded separately)
+game/*.jsdos
+game/*.zip
+
+# Temp files
+temp/
+*.tmp
+
+# OS files
+.DS_Store
+Thumbs.db

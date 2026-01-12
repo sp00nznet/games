@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  mechwarrior:
+    build: .
+    container_name: mechwarrior
+    ports:
+      - "8105:80"
+    volumes:
+      - ./game:/usr/share/nginx/html/game:ro
+    restart: unless-stopped

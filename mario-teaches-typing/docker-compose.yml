@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  mario-teaches-typing:
+    build: .
+    container_name: mario-teaches-typing
+    ports:
+      - "8101:80"
+    volumes:
+      - ./game:/usr/share/nginx/html/game:ro
+    restart: unless-stopped

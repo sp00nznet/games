@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  whiplash:
+    build: .
+    container_name: whiplash
+    ports:
+      - "8099:80"
+    volumes:
+      - ./game:/usr/share/nginx/html/game:ro
+    restart: unless-stopped

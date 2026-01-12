@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  busytown:
+    build: .
+    container_name: busytown
+    ports:
+      - "8090:80"
+    volumes:
+      - ./game:/usr/share/nginx/html/game:ro
+    restart: unless-stopped

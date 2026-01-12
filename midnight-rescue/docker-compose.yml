@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  midnight-rescue:
+    build: .
+    container_name: midnight-rescue
+    ports:
+      - "8098:80"
+    volumes:
+      - ./game:/usr/share/nginx/html/game:ro
+    restart: unless-stopped
