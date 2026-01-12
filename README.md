@@ -1,374 +1,205 @@
-# Self-Hosted Games
+# 🎮 Self-Hosted Retro Games
 
-A collection of self-hosted, browser-playable classic games using web-based emulation. Deploy via Docker or LXC (Proxmox).
+> **Play classic DOS games directly in your browser!** A curated collection of 27 containerized retro games using js-dos emulation. Deploy instantly via Docker or Proxmox LXC.
 
-## Available Games
-
-### Operation Neptune
-
-Classic DOS educational game from The Learning Company (1991). Solve math problems while navigating an underwater submarine adventure.
-
-- **Location:** [`operation-neptune/`](./operation-neptune/)
-- **Emulation:** js-dos (DOSBox in browser)
-- **Source:** [Archive.org](https://archive.org/details/msdos_Super_Solvers_Operation_Neptune_1990)
-- **Port:** 8080
-
-**Quick Start:**
-```bash
-cd operation-neptune
-./scripts/download-game.sh
-docker-compose up -d
-# Access at http://localhost:8080
-```
+[![Games](https://img.shields.io/badge/Games-27-brightgreen)]()
+[![Docker](https://img.shields.io/badge/Docker-Ready-blue)]()
+[![Proxmox](https://img.shields.io/badge/Proxmox-LXC-orange)]()
+[![js-dos](https://img.shields.io/badge/Emulator-js--dos-purple)]()
 
 ---
 
-### Gizmos & Gadgets
+## 📚 Table of Contents
 
-Classic DOS educational game from The Learning Company (1993). Build vehicles and race against Morty Maxwell by solving science puzzles about machines, magnets, and electronics.
-
-- **Location:** [`gizmos-gadgets/`](./gizmos-gadgets/)
-- **Emulation:** js-dos (DOSBox in browser)
-- **Source:** [Archive.org](https://archive.org/details/gizmos__gadgets)
-- **Port:** 8081
-
-**Quick Start:**
-```bash
-cd gizmos-gadgets
-./scripts/download-game.sh
-docker-compose up -d
-# Access at http://localhost:8081
-```
+- [Quick Start](#-quick-start)
+- [Game Library](#-game-library)
+  - [Educational](#-educational)
+  - [Platformers](#-platformers)
+  - [Racing](#-racing)
+  - [Strategy & Tactical](#-strategy--tactical)
+  - [First-Person Shooters](#-first-person-shooters)
+  - [Fighting & Action](#-fighting--action)
+  - [Puzzle & Simulation](#-puzzle--simulation)
+- [Deployment](#-deployment)
+- [Adding Games](#-adding-games)
 
 ---
 
-### Jazz Jackrabbit: Holiday Hare 1995
+## 🚀 Quick Start
 
-Holiday-themed platformer from Epic MegaGames (1995). Designed by Cliff Bleszinski, race through festive levels on planet Candion with your blaster!
-
-- **Location:** [`jazz-jackrabbit/`](./jazz-jackrabbit/)
-- **Emulation:** js-dos (DOSBox in browser)
-- **Source:** [Archive.org](https://archive.org/details/msdos_Jazz_Jackrabbit_-_Holiday_Hare_1995_1995)
-- **Port:** 8082
-
-**Quick Start:**
 ```bash
+# Clone the repository
+git clone <repo-url>
+cd games
+
+# Pick a game and run it
 cd jazz-jackrabbit
 ./scripts/download-game.sh
 docker-compose up -d
-# Access at http://localhost:8082
+
+# Play at http://localhost:8082
 ```
 
 ---
 
-### Epic Pinball
+## 🎯 Game Library
 
-Classic pinball simulation from Digital Extremes (1993). Third best-selling shareware game ever - revenue helped fund Unreal Engine development!
+### 📖 Educational
 
-- **Location:** [`epic-pinball/`](./epic-pinball/)
-- **Emulation:** js-dos (DOSBox in browser)
-- **Source:** [Archive.org](https://archive.org/details/epicpin_202406)
-- **Port:** 8083
-
-**Quick Start:**
-```bash
-cd epic-pinball
-./scripts/download-game.sh
-docker-compose up -d
-# Access at http://localhost:8083
-```
+| | Game | Year | Description | Port |
+|---|------|------|-------------|:----:|
+| <img src="https://archive.org/services/img/msdos_Super_Solvers_Operation_Neptune_1990" width="100"> | **[Operation Neptune](./operation-neptune/)**<br>The Learning Company | 1991 | Underwater math adventure - solve problems to navigate your submarine! | `8080` |
+| <img src="https://archive.org/services/img/gizmos__gadgets" width="100"> | **[Gizmos & Gadgets](./gizmos-gadgets/)**<br>The Learning Company | 1993 | Build vehicles by solving science puzzles about machines & magnets | `8081` |
+| <img src="https://archive.org/services/img/msdos_Super_Solvers_Teasure_MathStorm_1992" width="100"> | **[Treasure MathStorm!](./treasure-mathstorm/)**<br>The Learning Company | 1992 | Climb the mountain solving math puzzles to save the kingdom | `8093` |
+| <img src="https://archive.org/services/img/msdos_Super_Solvers_Midnight_Rescue_1989" width="100"> | **[Midnight Rescue!](./midnight-rescue/)**<br>The Learning Company | 1989 | Reading adventure - save Shady Glen School from paint robots! | `8098` |
+| <img src="https://archive.org/services/img/TYPING_EGA" width="100"> | **[Mario Teaches Typing](./mario-teaches-typing/)**<br>Interplay / Nintendo | 1992 | Learn typing with Mario, Luigi & Princess Toadstool | `8101` |
+| <img src="https://archive.org/services/img/busytown_dos" width="100"> | **[Richard Scarry's Busytown](./busytown/)**<br>Novotrade | 1994 | Explore Busytown with Huckle Cat and friends | `8090` |
+| <img src="https://archive.org/services/img/storybookweaver_1995" width="100"> | **[Storybook Weaver](./storybook-weaver/)**<br>MECC | 1995 | Create your own illustrated storybooks | `8095` |
 
 ---
 
-### Carmageddon Max Pack
+### 🏃 Platformers
 
-Vehicular combat racing from Stainless Games (1998). PC Zone's "Game of the Year" 1997. Includes original game + Splat Pack expansion. **Mature content (18+).**
-
-- **Location:** [`carmageddon/`](./carmageddon/)
-- **Emulation:** js-dos (DOSBox in browser)
-- **Source:** [Archive.org](https://archive.org/details/msdos_Carmageddon_Max_Pack_1998)
-- **Port:** 8084
-
-**Quick Start:**
-```bash
-cd carmageddon
-./scripts/download-game.sh
-docker-compose up -d
-# Access at http://localhost:8084
-```
+| | Game | Year | Description | Port |
+|---|------|------|-------------|:----:|
+| <img src="https://archive.org/services/img/msdos_Jazz_Jackrabbit_1994" width="100"> | **[Jazz Jackrabbit](./jazz-jackrabbit-original/)**<br>Epic MegaGames | 1994 | PC's answer to Sonic! *PC Format Arcade Game of the Year* | `8094` |
+| <img src="https://archive.org/services/img/msdos_Jazz_Jackrabbit_-_Holiday_Hare_1995_1995" width="100"> | **[Jazz Jackrabbit: Holiday Hare](./jazz-jackrabbit/)**<br>Epic MegaGames | 1995 | Festive platforming on planet Candion | `8082` |
+| <img src="https://archive.org/services/img/msdos_Oddworld_-_Abes_Oddysee_1997" width="100"> | **[Oddworld: Abe's Oddysee](./oddworld-abes-oddysee/)**<br>Oddworld Inhabitants | 1997 | Cinematic platformer masterpiece - escape RuptureFarms! | `8103` |
 
 ---
 
-### Destruction Derby 2
+### 🏎️ Racing
 
-Vehicular combat racing from Reflections Interactive (1996). Smash and crash your way to victory in demolition derbies and races!
-
-- **Location:** [`destruction-derby-2/`](./destruction-derby-2/)
-- **Emulation:** js-dos (DOSBox in browser)
-- **Source:** [Archive.org](https://archive.org/details/msdos_Destruction_Derby_2_1996)
-- **Port:** 8085
-
----
-
-### Jagged Alliance
-
-Turn-based tactical strategy from Sir-tech (1994). Hire mercenaries and liberate the island of Metavira in this cult classic!
-
-- **Location:** [`jagged-alliance/`](./jagged-alliance/)
-- **Emulation:** js-dos (DOSBox in browser)
-- **Source:** [Archive.org](https://archive.org/details/msdos_Jagged_Alliance_1994)
-- **Port:** 8086
+| | Game | Year | Description | Port |
+|---|------|------|-------------|:----:|
+| <img src="https://archive.org/services/img/msdos_Carmageddon_Max_Pack_1998" width="100"> | **[Carmageddon Max Pack](./carmageddon/)**<br>Stainless Games | 1998 | Vehicular mayhem! *PC Zone GOTY 1997* ⚠️ 18+ | `8084` |
+| <img src="https://archive.org/services/img/msdos_Destruction_Derby_2_1996" width="100"> | **[Destruction Derby 2](./destruction-derby-2/)**<br>Reflections Interactive | 1996 | Smash and crash your way to victory! | `8085` |
+| <img src="https://archive.org/services/img/interstate-76-activision-1997" width="100"> | **[Interstate '76](./interstate-76/)**<br>Activision | 1997 | 70s muscle cars with guns & funky soundtrack | `8089` |
+| <img src="https://archive.org/services/img/msdos_Whiplash_1995" width="100"> | **[Whiplash](./whiplash/)**<br>Gremlin Interactive | 1995 | Futuristic racing with weapons | `8099` |
+| <img src="https://archive.org/services/img/POD20_201808" width="100"> | **[P.O.D.: Planet of Death](./pod/)**<br>Ubisoft | 1997 | Race to escape a dying planet! Bundled with Pentium MMX | `8102` |
+| <img src="https://archive.org/services/img/hover_20240305" width="100"> | **[Hover!](./hover/)**<br>Microsoft | 1995 | Classic Windows 95 hovercraft maze game | `8097` |
 
 ---
 
-### Syndicate Plus
+### 🎖️ Strategy & Tactical
 
-Cyberpunk tactical action from Bullfrog (1994). Control cyborg agents in a dark future. Includes American Revolt expansion.
-
-- **Location:** [`syndicate-plus/`](./syndicate-plus/)
-- **Emulation:** js-dos (DOSBox in browser)
-- **Source:** [Archive.org](https://archive.org/details/msdos_Syndicate_Plus_1994)
-- **Port:** 8087
-
----
-
-### Redneck Rampage Rides Again
-
-Build Engine FPS sequel from Xatrix (1998). More redneck mayhem in Arkansas! **Mature content (17+).**
-
-- **Location:** [`redneck-rampage-rides-again/`](./redneck-rampage-rides-again/)
-- **Emulation:** js-dos (DOSBox in browser)
-- **Source:** [Archive.org](https://archive.org/details/msdos_Redneck_Rampage_Rides_Again_1998)
-- **Port:** 8088
+| | Game | Year | Description | Port |
+|---|------|------|-------------|:----:|
+| <img src="https://archive.org/services/img/msdos_Jagged_Alliance_1994" width="100"> | **[Jagged Alliance](./jagged-alliance/)**<br>Sir-tech | 1994 | Hire mercenaries, liberate Metavira - cult classic! | `8086` |
+| <img src="https://archive.org/services/img/msdos_Syndicate_Plus_1994" width="100"> | **[Syndicate Plus](./syndicate-plus/)**<br>Bullfrog | 1994 | Cyberpunk tactical action + American Revolt expansion | `8087` |
+| <img src="https://archive.org/services/img/mechwarrior_1989" width="100"> | **[MechWarrior](./mechwarrior/)**<br>Dynamix / Activision | 1989 | Pilot BattleMechs in the 31st century | `8105` |
 
 ---
 
-### Interstate '76
+### 🔫 First-Person Shooters
 
-Vehicular combat set in 1970s America from Activision (1997). Funky soundtrack, muscle cars, and guns!
-
-- **Location:** [`interstate-76/`](./interstate-76/)
-- **Emulation:** js-dos (DOSBox in browser)
-- **Source:** [Archive.org](https://archive.org/details/interstate-76-activision-1997)
-- **Port:** 8089
-
----
-
-### Richard Scarry's Busytown
-
-Educational adventure for kids based on Richard Scarry's beloved books. Explore Busytown with Huckle Cat and friends!
-
-- **Location:** [`busytown/`](./busytown/)
-- **Emulation:** js-dos (DOSBox in browser)
-- **Source:** [Archive.org](https://archive.org/details/busytown_dos)
-- **Port:** 8090
+| | Game | Year | Description | Port |
+|---|------|------|-------------|:----:|
+| <img src="https://archive.org/services/img/msdos_Redneck_Rampage_1997" width="100"> | **[Redneck Rampage](./redneck-rampage/)**<br>Xatrix / Interplay | 1997 | Build Engine FPS - aliens meet Arkansas! ⚠️ 17+ | `8091` |
+| <img src="https://archive.org/services/img/msdos_Redneck_Rampage_Rides_Again_1998" width="100"> | **[Redneck Rampage Rides Again](./redneck-rampage-rides-again/)**<br>Xatrix / Interplay | 1998 | More redneck mayhem! ⚠️ 17+ | `8088` |
+| <img src="https://archive.org/services/img/nam_20210413" width="100"> | **[NAM](./nam/)**<br>TNT Team / GT Interactive | 1998 | Build Engine Vietnam warfare | `8092` |
 
 ---
 
-### Redneck Rampage
+### 👊 Fighting & Action
 
-Build Engine FPS from Xatrix/Interplay (1997). Alien invasion meets Southern hospitality! **Mature content (17+).**
-
-- **Location:** [`redneck-rampage/`](./redneck-rampage/)
-- **Emulation:** js-dos (DOSBox in browser)
-- **Source:** [Archive.org](https://archive.org/details/msdos_Redneck_Rampage_1997)
-- **Port:** 8091
+| | Game | Year | Description | Port |
+|---|------|------|-------------|:----:|
+| <img src="https://archive.org/services/img/msdos_One_Must_Fall_2097_1994" width="100"> | **[One Must Fall 2097](./one-must-fall-2097/)**<br>Diversions / Epic | 1994 | Giant robot fighting tournament - now freeware! | `8096` |
+| <img src="https://archive.org/services/img/WEIRD_VGA" width="100"> | **[Weird Dreams](./weird-dreams/)**<br>Rainbird Software | 1989 | Surreal nightmare action - fight killer lawn mowers! | `8104` |
 
 ---
 
-### NAM
+### 🧩 Puzzle & Simulation
 
-Build Engine FPS set in Vietnam from TNT Team (1998). Tactical warfare in the jungle. **Mature content.**
-
-- **Location:** [`nam/`](./nam/)
-- **Emulation:** js-dos (DOSBox in browser)
-- **Source:** [Archive.org](https://archive.org/details/nam_20210413)
-- **Port:** 8092
-
----
-
-### Treasure MathStorm!
-
-Educational math adventure from The Learning Company (1992). Climb the mountain and solve math puzzles to save the kingdom!
-
-- **Location:** [`treasure-mathstorm/`](./treasure-mathstorm/)
-- **Emulation:** js-dos (DOSBox in browser)
-- **Source:** [Archive.org](https://archive.org/details/msdos_Super_Solvers_Teasure_MathStorm_1992)
-- **Port:** 8093
+| | Game | Year | Description | Port |
+|---|------|------|-------------|:----:|
+| <img src="https://archive.org/services/img/epicpin_202406" width="100"> | **[Epic Pinball](./epic-pinball/)**<br>Digital Extremes | 1993 | 3rd best-selling shareware ever! Funded Unreal Engine | `8083` |
+| <img src="https://archive.org/services/img/the_even_more_incredible_machine_1993" width="100"> | **[The Incredible Machine](./incredible-machine/)**<br>Sierra / Dynamix | 1993 | Rube Goldberg puzzle perfection | `8100` |
+| <img src="https://archive.org/services/img/catz_april1998" width="100"> | **[Catz](./catz/)**<br>PF Magic | 1998 | Adopt and raise virtual kittens | `8106` |
 
 ---
 
-### Jazz Jackrabbit (Original)
+## 📦 Deployment
 
-The original 1994 platformer from Epic MegaGames. PC Format's Arcade Game of the Year! Save Princess Eva Earlong from Devan Shell.
+### 🐳 Docker (Recommended)
 
-- **Location:** [`jazz-jackrabbit-original/`](./jazz-jackrabbit-original/)
-- **Emulation:** js-dos (DOSBox in browser)
-- **Source:** [Archive.org](https://archive.org/details/msdos_Jazz_Jackrabbit_1994)
-- **Port:** 8094
-
----
-
-### Storybook Weaver
-
-Creative writing software for kids from MECC (1995). Create illustrated storybooks with backgrounds, characters, and your own text!
-
-- **Location:** [`storybook-weaver/`](./storybook-weaver/)
-- **Emulation:** js-dos (DOSBox in browser)
-- **Source:** [Archive.org](https://archive.org/details/storybookweaver_1995)
-- **Port:** 8095
-
----
-
-### One Must Fall 2097
-
-Giant robot fighting game from Diversions Entertainment (1994). Battle in the WAR tournament with customizable mechs!
-
-- **Location:** [`one-must-fall-2097/`](./one-must-fall-2097/)
-- **Emulation:** js-dos (DOSBox in browser)
-- **Source:** [Archive.org](https://archive.org/details/msdos_One_Must_Fall_2097_1994)
-- **Port:** 8096
-
----
-
-### Hover!
-
-Classic Windows 95 pack-in game from Microsoft (1995). Navigate a 3D maze with your hovercraft and capture flags!
-
-- **Location:** [`hover/`](./hover/)
-- **Emulation:** js-dos (DOSBox in browser)
-- **Source:** [Archive.org](https://archive.org/details/hover_20240305)
-- **Port:** 8097
-
----
-
-### Midnight Rescue!
-
-Educational reading game from The Learning Company (1989). Save Shady Glen School from Morty Maxwell's paint robots!
-
-- **Location:** [`midnight-rescue/`](./midnight-rescue/)
-- **Emulation:** js-dos (DOSBox in browser)
-- **Source:** [Archive.org](https://archive.org/details/msdos_Super_Solvers_Midnight_Rescue_1989)
-- **Port:** 8098
-
----
-
-### Whiplash
-
-Futuristic racing game from Gremlin Interactive (1995). High-speed racing with weapons on twisting tracks!
-
-- **Location:** [`whiplash/`](./whiplash/)
-- **Emulation:** js-dos (DOSBox in browser)
-- **Source:** [Archive.org](https://archive.org/details/msdos_Whiplash_1995)
-- **Port:** 8099
-
----
-
-### The Even More Incredible Machine
-
-Rube Goldberg puzzle game from Sierra/Dynamix (1993). Build chain-reaction machines with gears, pulleys, and cats!
-
-- **Location:** [`incredible-machine/`](./incredible-machine/)
-- **Emulation:** js-dos (DOSBox in browser)
-- **Source:** [Archive.org](https://archive.org/details/the_even_more_incredible_machine_1993)
-- **Port:** 8100
-
----
-
-### Mario Teaches Typing
-
-Educational typing game from Interplay/Nintendo (1992). Learn to type with Mario, Luigi, and Princess Toadstool!
-
-- **Location:** [`mario-teaches-typing/`](./mario-teaches-typing/)
-- **Emulation:** js-dos (DOSBox in browser)
-- **Source:** [Archive.org](https://archive.org/details/TYPING_EGA)
-- **Port:** 8101
-
----
-
-### P.O.D.: Planet of Death
-
-Futuristic racing game from Ubisoft (1997). Race to escape a dying planet! Bundled with Pentium MMX PCs.
-
-- **Location:** [`pod/`](./pod/)
-- **Emulation:** js-dos (DOSBox in browser)
-- **Source:** [Archive.org](https://archive.org/details/POD20_201808)
-- **Port:** 8102
-
----
-
-### Oddworld: Abe's Oddysee
-
-Cinematic platformer from Oddworld Inhabitants (1997). Guide Abe as he escapes RuptureFarms and saves his fellow Mudokons!
-
-- **Location:** [`oddworld-abes-oddysee/`](./oddworld-abes-oddysee/)
-- **Emulation:** js-dos (DOSBox in browser)
-- **Source:** [Archive.org](https://archive.org/details/msdos_Oddworld_-_Abes_Oddysee_1997)
-- **Port:** 8103
-
----
-
-### Weird Dreams
-
-Surreal action-adventure from Rainbird Software (1989). Navigate bizarre dreamscapes and fight killer lawn mowers!
-
-- **Location:** [`weird-dreams/`](./weird-dreams/)
-- **Emulation:** js-dos (DOSBox in browser)
-- **Source:** [Archive.org](https://archive.org/details/WEIRD_VGA)
-- **Port:** 8104
-
----
-
-### MechWarrior
-
-BattleTech mech simulation from Dynamix/Activision (1989). Pilot giant BattleMechs in the 31st century!
-
-- **Location:** [`mechwarrior/`](./mechwarrior/)
-- **Emulation:** js-dos (DOSBox in browser)
-- **Source:** [Archive.org](https://archive.org/details/mechwarrior_1989)
-- **Port:** 8105
-
----
-
-### Catz
-
-Virtual pet simulation from PF Magic (1998). Adopt and care for your own virtual kitten!
-
-- **Location:** [`catz/`](./catz/)
-- **Emulation:** js-dos (DOSBox in browser)
-- **Source:** [Archive.org](https://archive.org/details/catz_april1998)
-- **Port:** 8106
-
-## Deployment Options
-
-### Docker
-
-Each game includes a `Dockerfile` and `docker-compose.yml`:
+Each game is fully containerized:
 
 ```bash
 cd <game-directory>
-docker-compose up -d
+./scripts/download-game.sh    # Download from Archive.org
+docker-compose up -d          # Start the container
 ```
 
-### Proxmox LXC
+### 📦 Proxmox LXC
 
-One-line installer scripts are provided for Proxmox:
+One-liner installer for Proxmox hosts:
 
 ```bash
-bash -c "$(wget -qLO - <installer-url>)"
+bash lxc/proxmox-install.sh
 ```
 
-Or use the manual LXC scripts in each game's `lxc/` directory.
+### 🎮 Run Multiple Games
 
-## Adding More Games
+```bash
+# Start several games at once
+for game in jazz-jackrabbit carmageddon mechwarrior; do
+  (cd $game && docker-compose up -d)
+done
+```
 
-The framework supports adding more DOS games. To add a new game:
+---
 
-1. Create a new directory under the repo root
-2. Copy the structure from `operation-neptune/`
-3. Modify the HTML, configs, and scripts for the new game
-4. Create the appropriate jsdos bundle
+## 🔢 Quick Port Reference
 
-## License
+| Port | Game | Port | Game |
+|:----:|------|:----:|------|
+| `8080` | Operation Neptune | `8094` | Jazz Jackrabbit |
+| `8081` | Gizmos & Gadgets | `8095` | Storybook Weaver |
+| `8082` | Jazz: Holiday Hare | `8096` | One Must Fall 2097 |
+| `8083` | Epic Pinball | `8097` | Hover! |
+| `8084` | Carmageddon | `8098` | Midnight Rescue! |
+| `8085` | Destruction Derby 2 | `8099` | Whiplash |
+| `8086` | Jagged Alliance | `8100` | Incredible Machine |
+| `8087` | Syndicate Plus | `8101` | Mario Teaches Typing |
+| `8088` | Redneck Rampage 2 | `8102` | P.O.D. |
+| `8089` | Interstate '76 | `8103` | Oddworld |
+| `8090` | Busytown | `8104` | Weird Dreams |
+| `8091` | Redneck Rampage | `8105` | MechWarrior |
+| `8092` | NAM | `8106` | Catz |
+| `8093` | Treasure MathStorm | | |
 
-Infrastructure code is provided as-is. Individual games have their own licensing - check Archive.org for terms.
+---
+
+## ➕ Adding New Games
+
+1. **Create directory:**
+   ```bash
+   mkdir -p new-game/{game,scripts,lxc}
+   ```
+
+2. **Copy template** from any existing game
+
+3. **Customize:**
+   - `index.html` — Web interface & js-dos config
+   - `scripts/download-game.sh` — Archive.org URL
+   - `docker-compose.yml` — Unique port
+
+4. **Bundle format:** ZIP containing game files + `.jsdos/dosbox.conf`
+
+---
+
+## 📜 License
+
+Infrastructure code provided as-is under MIT license. Individual games retain their original copyrights — sourced from [Internet Archive](https://archive.org) for preservation and personal/educational use.
+
+---
+
+<div align="center">
+
+**Powered by [js-dos](https://js-dos.com)** | **Games from [Internet Archive](https://archive.org)**
+
+Made with ❤️ for retro gaming enthusiasts
+
+</div>
