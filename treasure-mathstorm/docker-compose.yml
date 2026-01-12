@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  treasure-mathstorm:
+    build: .
+    container_name: treasure-mathstorm
+    ports:
+      - "8093:80"
+    volumes:
+      - ./game:/usr/share/nginx/html/game:ro
+    restart: unless-stopped

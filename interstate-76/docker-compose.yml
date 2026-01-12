@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  interstate-76:
+    build: .
+    container_name: interstate-76
+    ports:
+      - "8089:80"
+    volumes:
+      - ./game:/usr/share/nginx/html/game:ro
+    restart: unless-stopped

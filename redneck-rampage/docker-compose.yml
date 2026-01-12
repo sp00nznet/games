@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  redneck-rampage:
+    build: .
+    container_name: redneck-rampage
+    ports:
+      - "8091:80"
+    volumes:
+      - ./game:/usr/share/nginx/html/game:ro
+    restart: unless-stopped

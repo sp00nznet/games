@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  storybook-weaver:
+    build: .
+    container_name: storybook-weaver
+    ports:
+      - "8095:80"
+    volumes:
+      - ./game:/usr/share/nginx/html/game:ro
+    restart: unless-stopped

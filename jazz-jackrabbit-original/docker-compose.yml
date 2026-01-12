@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  jazz-jackrabbit-original:
+    build: .
+    container_name: jazz-jackrabbit-original
+    ports:
+      - "8094:80"
+    volumes:
+      - ./game:/usr/share/nginx/html/game:ro
+    restart: unless-stopped

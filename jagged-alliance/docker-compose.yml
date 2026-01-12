@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  jagged-alliance:
+    build: .
+    container_name: jagged-alliance
+    ports:
+      - "8086:80"
+    volumes:
+      - ./game:/usr/share/nginx/html/game:ro
+    restart: unless-stopped

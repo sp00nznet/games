@@ -97,6 +97,127 @@ docker-compose up -d
 # Access at http://localhost:8084
 ```
 
+---
+
+### Destruction Derby 2
+
+Vehicular combat racing from Reflections Interactive (1996). Smash and crash your way to victory in demolition derbies and races!
+
+- **Location:** [`destruction-derby-2/`](./destruction-derby-2/)
+- **Emulation:** js-dos (DOSBox in browser)
+- **Source:** [Archive.org](https://archive.org/details/msdos_Destruction_Derby_2_1996)
+- **Port:** 8085
+
+---
+
+### Jagged Alliance
+
+Turn-based tactical strategy from Sir-tech (1994). Hire mercenaries and liberate the island of Metavira in this cult classic!
+
+- **Location:** [`jagged-alliance/`](./jagged-alliance/)
+- **Emulation:** js-dos (DOSBox in browser)
+- **Source:** [Archive.org](https://archive.org/details/msdos_Jagged_Alliance_1994)
+- **Port:** 8086
+
+---
+
+### Syndicate Plus
+
+Cyberpunk tactical action from Bullfrog (1994). Control cyborg agents in a dark future. Includes American Revolt expansion.
+
+- **Location:** [`syndicate-plus/`](./syndicate-plus/)
+- **Emulation:** js-dos (DOSBox in browser)
+- **Source:** [Archive.org](https://archive.org/details/msdos_Syndicate_Plus_1994)
+- **Port:** 8087
+
+---
+
+### Redneck Rampage Rides Again
+
+Build Engine FPS sequel from Xatrix (1998). More redneck mayhem in Arkansas! **Mature content (17+).**
+
+- **Location:** [`redneck-rampage-rides-again/`](./redneck-rampage-rides-again/)
+- **Emulation:** js-dos (DOSBox in browser)
+- **Source:** [Archive.org](https://archive.org/details/msdos_Redneck_Rampage_Rides_Again_1998)
+- **Port:** 8088
+
+---
+
+### Interstate '76
+
+Vehicular combat set in 1970s America from Activision (1997). Funky soundtrack, muscle cars, and guns!
+
+- **Location:** [`interstate-76/`](./interstate-76/)
+- **Emulation:** js-dos (DOSBox in browser)
+- **Source:** [Archive.org](https://archive.org/details/interstate-76-activision-1997)
+- **Port:** 8089
+
+---
+
+### Richard Scarry's Busytown
+
+Educational adventure for kids based on Richard Scarry's beloved books. Explore Busytown with Huckle Cat and friends!
+
+- **Location:** [`busytown/`](./busytown/)
+- **Emulation:** js-dos (DOSBox in browser)
+- **Source:** [Archive.org](https://archive.org/details/busytown_dos)
+- **Port:** 8090
+
+---
+
+### Redneck Rampage
+
+Build Engine FPS from Xatrix/Interplay (1997). Alien invasion meets Southern hospitality! **Mature content (17+).**
+
+- **Location:** [`redneck-rampage/`](./redneck-rampage/)
+- **Emulation:** js-dos (DOSBox in browser)
+- **Source:** [Archive.org](https://archive.org/details/msdos_Redneck_Rampage_1997)
+- **Port:** 8091
+
+---
+
+### NAM
+
+Build Engine FPS set in Vietnam from TNT Team (1998). Tactical warfare in the jungle. **Mature content.**
+
+- **Location:** [`nam/`](./nam/)
+- **Emulation:** js-dos (DOSBox in browser)
+- **Source:** [Archive.org](https://archive.org/details/nam_20210413)
+- **Port:** 8092
+
+---
+
+### Treasure MathStorm!
+
+Educational math adventure from The Learning Company (1992). Climb the mountain and solve math puzzles to save the kingdom!
+
+- **Location:** [`treasure-mathstorm/`](./treasure-mathstorm/)
+- **Emulation:** js-dos (DOSBox in browser)
+- **Source:** [Archive.org](https://archive.org/details/msdos_Super_Solvers_Teasure_MathStorm_1992)
+- **Port:** 8093
+
+---
+
+### Jazz Jackrabbit (Original)
+
+The original 1994 platformer from Epic MegaGames. PC Format's Arcade Game of the Year! Save Princess Eva Earlong from Devan Shell.
+
+- **Location:** [`jazz-jackrabbit-original/`](./jazz-jackrabbit-original/)
+- **Emulation:** js-dos (DOSBox in browser)
+- **Source:** [Archive.org](https://archive.org/details/msdos_Jazz_Jackrabbit_1994)
+- **Port:** 8094
+
+---
+
+### Storybook Weaver
+
+Creative writing software for kids from MECC (1995). Create illustrated storybooks with backgrounds, characters, and your own text!
+
+- **Location:** [`storybook-weaver/`](./storybook-weaver/)
+- **Emulation:** js-dos (DOSBox in browser)
+- **Source:** [Archive.org](https://archive.org/details/storybookweaver_1995)
+- **Port:** 8095
+
 ## Deployment Options
 
 ### Docker
