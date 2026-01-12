@@ -218,6 +218,127 @@ Creative writing software for kids from MECC (1995). Create illustrated storyboo
 - **Source:** [Archive.org](https://archive.org/details/storybookweaver_1995)
 - **Port:** 8095
 
+---
+
+### One Must Fall 2097
+
+Giant robot fighting game from Diversions Entertainment (1994). Battle in the WAR tournament with customizable mechs!
+
+- **Location:** [`one-must-fall-2097/`](./one-must-fall-2097/)
+- **Emulation:** js-dos (DOSBox in browser)
+- **Source:** [Archive.org](https://archive.org/details/msdos_One_Must_Fall_2097_1994)
+- **Port:** 8096
+
+---
+
+### Hover!
+
+Classic Windows 95 pack-in game from Microsoft (1995). Navigate a 3D maze with your hovercraft and capture flags!
+
+- **Location:** [`hover/`](./hover/)
+- **Emulation:** js-dos (DOSBox in browser)
+- **Source:** [Archive.org](https://archive.org/details/hover_20240305)
+- **Port:** 8097
+
+---
+
+### Midnight Rescue!
+
+Educational reading game from The Learning Company (1989). Save Shady Glen School from Morty Maxwell's paint robots!
+
+- **Location:** [`midnight-rescue/`](./midnight-rescue/)
+- **Emulation:** js-dos (DOSBox in browser)
+- **Source:** [Archive.org](https://archive.org/details/msdos_Super_Solvers_Midnight_Rescue_1989)
+- **Port:** 8098
+
+---
+
+### Whiplash
+
+Futuristic racing game from Gremlin Interactive (1995). High-speed racing with weapons on twisting tracks!
+
+- **Location:** [`whiplash/`](./whiplash/)
+- **Emulation:** js-dos (DOSBox in browser)
+- **Source:** [Archive.org](https://archive.org/details/msdos_Whiplash_1995)
+- **Port:** 8099
+
+---
+
+### The Even More Incredible Machine
+
+Rube Goldberg puzzle game from Sierra/Dynamix (1993). Build chain-reaction machines with gears, pulleys, and cats!
+
+- **Location:** [`incredible-machine/`](./incredible-machine/)
+- **Emulation:** js-dos (DOSBox in browser)
+- **Source:** [Archive.org](https://archive.org/details/the_even_more_incredible_machine_1993)
+- **Port:** 8100
+
+---
+
+### Mario Teaches Typing
+
+Educational typing game from Interplay/Nintendo (1992). Learn to type with Mario, Luigi, and Princess Toadstool!
+
+- **Location:** [`mario-teaches-typing/`](./mario-teaches-typing/)
+- **Emulation:** js-dos (DOSBox in browser)
+- **Source:** [Archive.org](https://archive.org/details/TYPING_EGA)
+- **Port:** 8101
+
+---
+
+### P.O.D.: Planet of Death
+
+Futuristic racing game from Ubisoft (1997). Race to escape a dying planet! Bundled with Pentium MMX PCs.
+
+- **Location:** [`pod/`](./pod/)
+- **Emulation:** js-dos (DOSBox in browser)
+- **Source:** [Archive.org](https://archive.org/details/POD20_201808)
+- **Port:** 8102
+
+---
+
+### Oddworld: Abe's Oddysee
+
+Cinematic platformer from Oddworld Inhabitants (1997). Guide Abe as he escapes RuptureFarms and saves his fellow Mudokons!
+
+- **Location:** [`oddworld-abes-oddysee/`](./oddworld-abes-oddysee/)
+- **Emulation:** js-dos (DOSBox in browser)
+- **Source:** [Archive.org](https://archive.org/details/msdos_Oddworld_-_Abes_Oddysee_1997)
+- **Port:** 8103
+
+---
+
+### Weird Dreams
+
+Surreal action-adventure from Rainbird Software (1989). Navigate bizarre dreamscapes and fight killer lawn mowers!
+
+- **Location:** [`weird-dreams/`](./weird-dreams/)
+- **Emulation:** js-dos (DOSBox in browser)
+- **Source:** [Archive.org](https://archive.org/details/WEIRD_VGA)
+- **Port:** 8104
+
+---
+
+### MechWarrior
+
+BattleTech mech simulation from Dynamix/Activision (1989). Pilot giant BattleMechs in the 31st century!
+
+- **Location:** [`mechwarrior/`](./mechwarrior/)
+- **Emulation:** js-dos (DOSBox in browser)
+- **Source:** [Archive.org](https://archive.org/details/mechwarrior_1989)
+- **Port:** 8105
+
+---
+
+### Catz
+
+Virtual pet simulation from PF Magic (1998). Adopt and care for your own virtual kitten!
+
+- **Location:** [`catz/`](./catz/)
+- **Emulation:** js-dos (DOSBox in browser)
+- **Source:** [Archive.org](https://archive.org/details/catz_april1998)
+- **Port:** 8106
+
 ## Deployment Options
 
 ### Docker

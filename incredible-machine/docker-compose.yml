@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  incredible-machine:
+    build: .
+    container_name: incredible-machine
+    ports:
+      - "8100:80"
+    volumes:
+      - ./game:/usr/share/nginx/html/game:ro
+    restart: unless-stopped

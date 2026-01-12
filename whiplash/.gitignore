@@ -1,0 +1,6 @@
+game/*.jsdos
+game/*.zip
+temp/
+*.tmp
+.DS_Store
+Thumbs.db

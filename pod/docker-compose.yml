@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  pod:
+    build: .
+    container_name: pod
+    ports:
+      - "8102:80"
+    volumes:
+      - ./game:/usr/share/nginx/html/game:ro
+    restart: unless-stopped

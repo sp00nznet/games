@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MechWarrior - Self-Hosted DOS Game</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}body{background:#0a1a0a;color:#0f0;font-family:'Courier New',monospace;min-height:100vh;display:flex;flex-direction:column;align-items:center}header{padding:20px;background:linear-gradient(135deg,#0a2a0a,#0a3a0a);width:100%;text-align:center;border-bottom:2px solid #0f0}h1{color:#0f0;text-shadow:0 0 10px rgba(0,255,0,.7);letter-spacing:4px}main{flex:1;padding:20px;width:100%;max-width:900px;display:flex;flex-direction:column;align-items:center}#dos-container{width:100%;max-width:800px;aspect-ratio:4/3;background:#000;border:2px solid #0f0;border-radius:4px;box-shadow:0 0 20px rgba(0,255,0,.3)}#dos{width:100%;height:100%}.controls{margin-top:20px}button{background:#0a2a0a;color:#0f0;border:1px solid #0f0;padding:10px 20px;border-radius:3px;cursor:pointer;margin:5px;font-family:'Courier New',monospace}button:hover{background:#0f0;color:#0a0a0a}.loading{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;color:#0f0}.instructions{margin-top:30px;padding:20px;background:#0a2a0a;border:1px solid #0f0;border-radius:4px;max-width:800px;width:100%}.instructions h2{color:#0f0;margin-bottom:15px;border-bottom:1px solid #0f0;padding-bottom:10px}.instructions ul{list-style-position:inside;line-height:2}footer{padding:15px;background:#0a2a0a;width:100%;text-align:center;color:#060;font-size:.8em;border-top:1px solid #0f0}footer a{color:#0f0}
+    </style>
+</head>
+<body>
+    <header><h1>[ MECHWARRIOR ]</h1><p style="color:#0a0">Dynamix / Activision (1989) - BattleTech Simulation</p></header>
+    <main>
+        <div id="dos-container"><div id="dos"><div class="loading"><p>INITIALIZING REACTOR...</p></div></div></div>
+        <div class="controls"><button onclick="document.getElementById('dos-container').requestFullscreen()">FULLSCREEN</button><button onclick="location.reload()">RESTART</button></div>
+        <div class="instructions">
+            <h2>COMBAT CONTROLS</h2>
+            <ul>
+                <li><strong>Arrow Keys</strong> - Torso twist / Move</li>
+                <li><strong>A/Z</strong> - Throttle up/down</li>
+                <li><strong>Space</strong> - Fire weapons</li>
+                <li><strong>Tab</strong> - Cycle weapons</li>
+                <li><strong>R</strong> - Radar toggle</li>
+                <li><strong>Esc</strong> - Menu</li>
+            </ul>
+            <p style="margin-top:15px;color:#0a0">Pilot giant BattleMechs in the 31st century! The first game in the legendary MechWarrior series based on the BattleTech universe.</p>
+        </div>
+    </main>
+    <footer><p>Powered by <a href="https://js-dos.com/">js-dos</a> | Game from <a href="https://archive.org/details/mechwarrior_1989">Internet Archive</a></p></footer>
+    <script src="https://js-dos.com/v7/build/releases/latest/js-dos/js-dos.js"></script>
+    <link rel="stylesheet" href="https://js-dos.com/v7/build/releases/latest/js-dos/js-dos.css">
+    <script>Dos(document.getElementById("dos"),{url:"game/mechwarrior.jsdos",autoStart:true}).catch(()=>{document.getElementById("dos").innerHTML="<div class='loading'><p style='color:#f00'>SYSTEM ERROR: mechwarrior.jsdos not found</p></div>"});</script>
+</body>
+</html>

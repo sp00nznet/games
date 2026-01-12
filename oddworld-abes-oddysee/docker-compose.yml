@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  oddworld-abes-oddysee:
+    build: .
+    container_name: oddworld-abes-oddysee
+    ports:
+      - "8103:80"
+    volumes:
+      - ./game:/usr/share/nginx/html/game:ro
+    restart: unless-stopped
